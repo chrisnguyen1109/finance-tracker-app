@@ -31,7 +31,7 @@ export const signup = async (email, password, displayName) => {
         addDoc(collection(db, 'users'), {
             userId: res.user.uid,
             email: res.user.email,
-            amount: 0,
+            amount: 1000,
         }),
     ]);
 };
@@ -57,7 +57,7 @@ export const signinProvider = async provider => {
         return addDoc(collection(db, 'users'), {
             userId: res.user.uid,
             email: res.user.email,
-            amount: 0,
+            amount: 1000,
         });
     }
 

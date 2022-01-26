@@ -24,15 +24,15 @@ export default function Home() {
                 <AmountMoney loading={loading} money={money} error={error} />
                 <Tabs>
                     <TabList>
-                        <Tab>Transfer</Tab>
                         <Tab>Receipt</Tab>
+                        <Tab>Transfer</Tab>
                     </TabList>
 
                     <TabPanel>
-                        <TransactionList transfer uid={uid} />
+                        <TransactionList receipt uid={uid} />
                     </TabPanel>
                     <TabPanel>
-                        <TransactionList receipt uid={uid} />
+                        <TransactionList transfer uid={uid} />
                     </TabPanel>
                 </Tabs>
             </div>
